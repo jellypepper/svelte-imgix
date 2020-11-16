@@ -1,7 +1,7 @@
 {
   "name": "svelte-imgix",
   "description": "Responsive, lazily loaded images with Svelte and Imgix",
-  "version": "0.2.2",
+  "version": "0.2.1",
   "license": "MIT",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -33,7 +33,7 @@
     "query-string": "^6.13.7"
   },
   "peerDependencies": {
-    "svelte": "^3.29.4"
+    "svelte": "^3.0.0"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^16.0.0",
