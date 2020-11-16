@@ -18,7 +18,7 @@ export function generateSrcset(src: string, imgixParams: any) {
         : {})
     };
 
-    sets.push(`${trimSrc(src)}?${stringify(params)}`);
+    sets.push(`${trimSrc(src)}?${stringify(params)} ${widths[i]}w`);
   }
 
   return sets.join(', ');
