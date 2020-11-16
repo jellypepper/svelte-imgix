@@ -1,11 +1,11 @@
 {
   "name": "svelte-imgix",
   "description": "Responsive, lazily loaded images with Svelte and Imgix",
-  "version": "0.2.0",
+  "version": "0.1.1",
   "license": "MIT",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
-  "svelte": "index.ts",
+  "svelte": "Imgix.svelte",
   "scripts": {
     "build": "rollup -c",
     "prepublishOnly": "npm run build"
