@@ -20,6 +20,7 @@
   "files": [
     "*.ts",
     "*.svelte",
+    "lib",
     "dist"
   ],
   "repository": {
@@ -30,6 +31,7 @@
     "url": "https://github.com/seaneking/svelte-imgix/issues"
   },
   "devDependencies": {
+    "@babel/runtime": "^7.12.5",
     "@rollup/plugin-commonjs": "^16.0.0",
     "@rollup/plugin-node-resolve": "^10.0.0",
     "@rollup/plugin-typescript": "^6.1.0",

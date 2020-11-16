@@ -7,26 +7,23 @@
   import { onMount } from 'svelte';
   import { generateSrcset, trimSrc } from './lib/utils';
 
-  export let src: string;
-  export let alt: Optional<string> = undefined;
-  export let imgixParams: Optional<any> = {};
+  export let src;
+  export let alt;
+  export let imgixParams = {};
 
-  let imgElement: HTMLImageElement;
-  let observer: IntersectionObserver;
+  let imgElement;
+  let observer;
   let intersected = false;
 
   const baseSrc = trimSrc(src);
   const placeholder = `${baseSrc}?blur=200&px=16&auto=format`;
 
-  $: configuredSrc = Object.keys(imgixParams.length)
+  $: configuredSrc = Object.keys(imgixParams).length
     ? `${baseSrc}?${stringify(imgixParams)}`
     : src;
   $: srcset = generateSrcset(src, imgixParams);
 
-  const observerCallback: IntersectionObserverCallback = (
-    entries,
-    observer
-  ) => {
+  const observerCallback = (entries, observer) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         intersected = true;
