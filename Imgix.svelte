@@ -10,7 +10,6 @@
   export let src: string;
   export let alt: Optional<string> = undefined;
   export let imgixParams: Optional<any> = {};
-  export let sizes: string;
 
   let imgElement: HTMLImageElement;
   let observer: IntersectionObserver;
@@ -49,7 +48,7 @@
 <img
   bind:this={imgElement}
   src={intersected ? configuredSrc : placeholder}
-  {sizes}
-  {srcset}
   {alt}
+  {srcset}
+  {...$$props}
 />

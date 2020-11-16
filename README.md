@@ -49,5 +49,4 @@ You can either provide a full Imgix URL (with query parameters) to `svelte-imgix
 | ------------- | ------------------------------------------------------------------------------------- |
 | `src`         | Imgix source of the image                                                             |
 | `alt`         | Alt text for the image                                                                |
-| `sizes`       | Responsive size set                                                                   |
 | `ImgixParams` | Object of Imgix parameters to set on the image, overrides any defaults given in `src` |
