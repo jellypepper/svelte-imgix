@@ -23,6 +23,26 @@ npm i svelte-imgix
 />
 ```
 
+`svelte-imgix` is written in Typescript, and requires Svelte preprocessing (which includes typescript support) to be enabled in your bundler.
+
+Install `svelte-preprocess`
+
+```sh
+npm i svelte-preprocess
+```
+
+And include it in the svelte config in your `rollup.config.js` or `webpack.config.js`
+
+```js
+import autoPreprocess from 'svelte-preprocess';
+
+svelte({
+  preprocess: autoPreprocess()
+});
+```
+
+See the [svelte-preprocess docs](https://github.com/sveltejs/svelte-preprocess) for more.
+
 ### Adding Sizes
 
 Svelte-Imgix automatically generates a responsive `srcset` for a huge range of viewport sizes. By adding a `sizes` attribute to your image you can instruct the browser to use the appropriate source based on media queries.

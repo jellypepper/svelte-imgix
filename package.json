@@ -5,7 +5,7 @@
   "license": "MIT",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
-  "svelte": "./Imgix.svelte",
+  "svelte": "index.ts",
   "scripts": {
     "build": "rollup -c",
     "prepublishOnly": "npm run build"
@@ -31,10 +31,8 @@
     "url": "https://github.com/seaneking/svelte-imgix/issues"
   },
   "devDependencies": {
-    "@babel/runtime": "^7.12.5",
     "@rollup/plugin-commonjs": "^16.0.0",
     "@rollup/plugin-node-resolve": "^10.0.0",
-    "@rollup/plugin-typescript": "^6.1.0",
     "imgix.js": "^3.4.2",
     "prettier": "^2.1.2",
     "query-string": "^6.13.7",
@@ -42,7 +40,6 @@
     "rollup-plugin-svelte": "^6.1.0",
     "svelte": "^3.29.4",
     "svelte-preprocess": "^4.5.2",
-    "svelte-types-writer": "^1.0.1",
     "tslib": "^2.0.3",
     "typescript": "^4.0.5"
   }

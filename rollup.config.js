@@ -1,7 +1,7 @@
 import svelte from 'rollup-plugin-svelte';
 import resolve from '@rollup/plugin-node-resolve';
 import commonJS from '@rollup/plugin-commonjs';
-import typescript from '@rollup/plugin-typescript';
+import autoPreprocess from 'svelte-preprocess';
 
 import pkg from './package.json';
 
@@ -17,7 +17,8 @@ export default {
       dedupe: ['svelte']
     }),
     commonJS(),
-    svelte(),
-    typescript()
+    svelte({
+      preprocess: autoPreprocess()
+    })
   ]
 };
