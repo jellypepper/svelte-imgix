@@ -32,7 +32,6 @@
   "devDependencies": {
     "@rollup/plugin-commonjs": "^16.0.0",
     "@rollup/plugin-node-resolve": "^10.0.0",
-    "imgix.js": "^3.4.2",
     "prettier": "^2.1.2",
     "query-string": "^6.13.7",
     "rollup": "^2.33.0",

@@ -162,11 +162,6 @@ has@^1.0.3:
   dependencies:
     function-bind "^1.1.1"
 
-imgix.js@^3.4.2:
-  version "3.4.2"
-  resolved "https://registry.yarnpkg.com/imgix.js/-/imgix.js-3.4.2.tgz#e2773c4b743368d906e9ee47721ea0c6a5b6c30a"
-  integrity sha512-0lMP8kj9Dhd9177nTtIpJkCpgbjfGUNs2X7UlM2Jdxj3avQHaG3loruMVrAYXpGqbKsXeRDCyTWZ82Ct3OYjDQ==
-
 inflight@^1.0.4:
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/inflight/-/inflight-1.0.6.tgz#49bd6331d7d02d0c09bc910a1075ba8165b56df9"
