@@ -8,6 +8,7 @@
   "svelte": "Imgix.svelte",
   "scripts": {
     "build": "rollup -c",
+    "develop": "rollup -cw",
     "prepublishOnly": "npm run build"
   },
   "keywords": [
