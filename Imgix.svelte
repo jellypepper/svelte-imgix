@@ -18,7 +18,7 @@
   let intersected = false;
 
   const baseSrc = trimSrc(src);
-  const placeholder = `${baseSrc}?blur=200&px=16&auto=format`;
+  const placeholder = `${baseSrc}?blur=500&px=8&auto=format`;
   const resolutions: number[] = [];
 
   $: configuredSrc = Object.keys(imgixParams).length
