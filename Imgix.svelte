@@ -13,8 +13,7 @@
   export let alt: Optional<string>;
   export let imgixParams: Optional<any> = {};
 
-  let imgElement: HTMLImageElement;
-  let observer: IntersectionObserver;
+  let img: HTMLImageElement;
   let intersected = false;
 
   const baseSrc = trimSrc(src);
@@ -55,25 +54,25 @@
   }
 
   onMount(() => {
-    observer = new IntersectionObserver((entries, observer) => {
+    const observer = new IntersectionObserver((entries, observer) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           intersected = true;
-          observer.unobserve(imgElement);
+          observer.unobserve(img);
         }
       });
     });
 
-    observer.observe(imgElement);
+    img && observer.observe(img);
 
     return () => {
-      observer.unobserve(imgElement);
+      img && observer.unobserve(img);
     };
   });
 </script>
 
 <img
-  bind:this={imgElement}
+  bind:this={img}
   src={intersected ? configuredSrc : placeholder}
   {alt}
   {srcset}
