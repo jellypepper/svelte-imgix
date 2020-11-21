@@ -25,7 +25,7 @@ npm i svelte-imgix
 
 #### Svelte-preprocess
 
-`svelte-meta` is written in Typescript, and requires Svelte's preprocessing to be enabled. If you're using [Sapper](https://sapper.svelte.dev/) this comes enabled by default.
+`svelte-imgix` is written in Typescript, and requires Svelte's preprocessing to be enabled. If you're using [Sapper](https://sapper.svelte.dev/) this comes enabled by default.
 
 To enable preprocessing, install `svelte-preprocess` and include it in the svelte config in your `rollup.config.js` or `webpack.config.js`
 
