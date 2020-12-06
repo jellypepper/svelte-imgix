@@ -23,26 +23,6 @@ npm i svelte-imgix
 />
 ```
 
-#### Svelte-preprocess
-
-`svelte-imgix` is written in Typescript, and requires Svelte's preprocessing to be enabled. If you're using [Sapper](https://sapper.svelte.dev/) this comes enabled by default.
-
-To enable preprocessing, install `svelte-preprocess` and include it in the svelte config in your `rollup.config.js` or `webpack.config.js`
-
-```sh
-npm i svelte-preprocess
-```
-
-```js
-import autoPreprocess from 'svelte-preprocess';
-
-svelte({
-  preprocess: autoPreprocess()
-});
-```
-
-See the [svelte-preprocess docs](https://github.com/sveltejs/svelte-preprocess) for more.
-
 ### Adding Sizes
 
 Svelte-Imgix automatically generates a responsive `srcset` for a huge range of viewport sizes. By adding a `sizes` attribute to your image you can instruct the browser to use the appropriate source based on media queries.
@@ -65,8 +45,8 @@ You can either provide a full Imgix URL (with query parameters) to `svelte-imgix
 
 ### Properties
 
-| Property      | Description                                                                           |
-| ------------- | ------------------------------------------------------------------------------------- |
-| `src`         | Imgix source of the image                                                             |
-| `alt`         | Alt text for the image                                                                |
-| `ImgixParams` | Object of Imgix parameters to set on the image, overrides any defaults given in `src` |
+| Property      | Type     | Description                                                                           |
+| ------------- | -------- | ------------------------------------------------------------------------------------- |
+| `src`         | `string` | Imgix source of the image                                                             |
+| `alt`         | `string` | Alt text for the image                                                                |
+| `ImgixParams` | `object` | Object of Imgix parameters to set on the image, overrides any defaults given in `src` |
