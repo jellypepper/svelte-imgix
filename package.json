@@ -5,10 +5,12 @@
   "license": "MIT",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
-  "svelte": "Imgix.svelte",
+  "svelte": "./src/index.js",
+  "types": "./types/index.d.ts",
   "scripts": {
     "build": "rollup -c",
     "develop": "rollup -cw",
+    "typegen": "sveld",
     "prepublishOnly": "npm run build"
   },
   "keywords": [
@@ -42,6 +44,7 @@
     "prettier": "^2.1.2",
     "rollup": "^2.33.0",
     "rollup-plugin-svelte": "^6.1.0",
+    "sveld": "^0.5.0",
     "svelte-preprocess": "^4.5.2",
     "tslib": "^2.0.3",
     "typescript": "^4.0.5"

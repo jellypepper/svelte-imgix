@@ -2,34 +2,39 @@
   Imgix Component
   Responsive, lazily-loaded images with Svelte and Imgix
 -->
-<script lang="ts">
+<script>
   import { stringify } from 'query-string';
   import { onMount } from 'svelte';
 
   const INCREMENT_PERCENTAGE = 8;
   const MAX_SIZE = 8192;
 
-  export let src: string;
-  export let alt: Optional<string>;
-  export let imgixParams: Optional<any> = {};
+  /** @type {string} */
+  export let src;
+  /** @type {string} */
+  export let alt = undefined;
+  /** @type {object} */
+  export let imgixParams = {};
 
-  let img: HTMLImageElement;
+  /** @type {HTMLImageElement} */
+  let img;
   let intersected = false;
 
   const baseSrc = trimSrc(src);
   const placeholder = `${baseSrc}?blur=500&px=8&auto=format`;
-  const resolutions: number[] = [];
+  /** @type {number[]} */
+  const resolutions = [];
 
   $: configuredSrc = Object.keys(imgixParams).length
     ? `${baseSrc}?${stringify(imgixParams)}`
     : src;
   $: srcset = generateSrcset(src, imgixParams);
 
-  function trimSrc(src: string) {
+  function trimSrc(src) {
     return src.split(/[?#]/)[0];
   }
 
-  function generateSrcset(src: string, imgixParams: any) {
+  function generateSrcset(src, imgixParams) {
     const sets = [];
 
     for (var i = 0; i < resolutions.length; i++) {
