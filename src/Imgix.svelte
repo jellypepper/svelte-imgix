@@ -80,6 +80,6 @@
   bind:this={img}
   src={intersected ? configuredSrc : placeholder}
   {alt}
-  {srcset}
+  srcset={intersected ? srcset : ''}
   {...$$restProps}
 />
