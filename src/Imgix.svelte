@@ -81,5 +81,5 @@
   src={intersected ? configuredSrc : placeholder}
   {alt}
   {srcset}
-  {...$$props}
+  {...$$restProps}
 />
